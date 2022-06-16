@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+             margin:0px;
+            background-color: #1a1c28;
+
+        }
+        section{
+
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            /* background-color: pink; */
+        }
+        .gridItem{
+            /* border: 6px solid black; */
+            padding: 100px;
+
+        }
+        .parentContainer{
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+
+            display: grid;
+            background-color: #1a1c28;
+            gap: 10px;
+            grid-template-areas: 
+            'a a a b b'
+            'a a a b b '
+            'c c d d d'
+            'c c e e e'
+            ;
+
+            /* background-color: black; */
+            /* grid-template: repeat(5) / repeat(4); */ 
+            /* padding-left: 100px; */
+        }
+        .gridItem.one{
+            background-color: #eb5020;
+            grid-area: a;
+        }
+        .gridItem.two{
+            background-color: #ffa401;
+            grid-area: b;
+
+        }
+        .gridItem.three{
+            background-color: #05aa42;
+            grid-area: c;
+
+        }
+        .gridItem.four{
+            background-color: #01aefd;
+            grid-area: d;
+
+        }
+        .gridItem.five{
+            background-color: #01aefd;
+            grid-area: e;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="parentContainer">
+            <div class="gridItem one"></div>
+            <div class="gridItem two"></div>
+            <div class="gridItem three"></div>
+            <div class="gridItem four"></div>
+            <div class="gridItem five"></div>
+        </div>
+    </main>
+</body>
+</html>

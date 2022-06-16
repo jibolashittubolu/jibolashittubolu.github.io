@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+    <style>
+        html{
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Josefin Sans', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 15px;
+            /* max-width: 1440px;
+            min-width: 375px; */
+        }
+        main{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flexElement {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 3.5%;
+
+        }
+        .flexElement.one{
+            background-color: rgb(226 133 37);
+            border-radius: 10px 0px 0px 10px;
+        }
+        .flexElement.two{
+            background-color: rgb(1 105 114)
+        }
+        .flexElement.three{
+            background-color: rgb(0 64 63);
+            border-radius: 0px 10px 10px 0px;
+        }
+        .parentContainer{
+            max-width: 1440px;
+            min-width: 375px;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            border-radius: 15px;
+        }
+        button{
+            padding: 13px 40px;
+            border-radius: 25px;
+            border: none;
+        }
+        img{
+            /* opacity: 0.5; */
+            /* font-size: 10px !important; */
+            height: 70%;
+            /* width: 30%; */
+            /* color: white; */
+            /* background-color: transparent; */
+        }
+        .logo{
+            flex: 1;
+            /* background-color: pink; */
+            display: flex;
+            /* align-items: center; */
+        }
+        .title{
+            flex:2;
+            /* background-color: cyan; */
+            font-weight: 700;
+            color: hsla(0, 0%, 100%, 0.75);
+            font-size: 50px;
+            font-family: 'Big Shoulders Display', cursive;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+        .description{
+            flex: 4;
+            /* background-color: gainsboro; */
+            color: hsla(0, 0%, 100%, 0.75);
+            display: flex;
+            margin-top: 20px;
+            line-height: 26px;
+            /* align-items: center; */
+            /* justify-content: center; */
+        }
+        .learn{
+            flex: 2;
+            /* background-color:greenyellow; */
+            display: flex;
+            align-items:flex-end;
+        }
+        .button.one{
+            color: rgb(226 133 37);
+        }       
+        .button.two{
+            color: rgb(1 105 114)
+        }        
+        .button.three{
+            color: rgb(0 64 63)
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="parentContainer">
+            <div class="flexElement one">
+                <div class="logo">
+                    <img src="./assets/images/icon-sedans.svg" />
+                </div>
+                <div class="title">
+                    SEDANS
+                </div>
+                <div class="description">
+                    Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
+                </div>
+                <div class="learn">
+                    <button class="button one">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="flexElement two">
+                <div class="logo">
+                    <img src="./assets/images/icon-suvs.svg" />
+                </div>
+                <div class="title">
+                    SUVS
+                </div>
+                <div class="description">
+                    Take and SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.
+                </div>
+                <div class="learn">
+                    <button class="button two">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="flexElement three">
+                <div class="logo">
+                    <img src="./assets/images/icon-luxury.svg" />
+                </div>
+                <div class="title">
+                    LUXURY
+                </div>
+                <div class="description">
+                    Cruise in the best car brands withourt the bloated prices. Engoy the enhanced comfort of a luxury rental and arrive in style.
+                </div>
+                <div class="learn">
+                    <button class="button three">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

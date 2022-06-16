@@ -1,0 +1,373 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
+    <style>
+        html{
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+                        /* - Red: hsl(0, 100%, 74%) 
+            - Green: hsl(154, 59%, 51%)
+
+            ### Accent
+
+            - Blue: hsl(248, 32%, 49%)
+
+            ### Neutral
+
+            - Dark Blue: hsl(249, 10%, 26%) 
+            - Grayish Blue: hsl(246, 25%, 77%) */
+        }
+        body{
+            margin: 0px;
+        }
+        main{
+            background-color: #ff7978;
+            width: 100%;
+            height: 100vh;
+            /* max-height: 1000px; */
+            min-height: 500px;
+        }
+        .parentContainer{
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url(./assets/images/bg-intro-desktop.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* display: none; */
+        }
+
+        section{
+            flex: 1;
+        }
+
+        .sectionLeft{
+            /* background-color: greenyellow; */
+            color: white;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* background-color: pink; */
+            height: 100%;
+            min-height: 350px;
+            width: 50%;
+            /* min-height: 200px; */
+            /* flex: 3; */
+            /* border-right: 5px solid black; */
+            /* border-style: solid; */
+        }
+
+        .sectionRight{
+            height: 100%;
+            width: 100%;
+            /* background-color: lawngreen; */
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+
+            /* flex: 2; */
+        }
+
+        .firstParagraph{
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            /* line-height: 0; */
+            margin: 0px 0px 10px 0px;
+            width: 80%;
+        }
+
+        .small.left{
+            /* width: 30px; */
+            /* background-color: aqua; */
+            object-fit: contain;
+            font-size: 10px;
+            width: 80%;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        form{
+            height: 80%;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: white;
+            padding: 20px 10px;
+            /* display: grid;
+            gap: 2px;
+            grid-template-columns: repeat(1, 1fr); */
+        }
+
+        .formHead{
+            width: 100%;
+            height: 50px;
+            background-color: #5d54a3;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            margin-bottom: 10px;
+            min-height: 50px;
+        }
+
+        .inputContainer{
+            flex: 1;
+            width: 100%;
+            /* background-color: rgb(196, 182, 182); */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+        }
+
+        .buttonContainer{
+            all: none;
+            flex: 1;
+            width: 100%;
+            /* background-color: rgb(159, 148, 148); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input{
+            /* flex: 1; */
+            width: 90%;
+            height: 80%;
+            /* height: 30%; */
+            margin: 10px 0px;
+            border-radius: 3px;
+            /* border: 1px thin black; */
+            border-style: solid;
+            /* opacity: 0.5; */
+            border-width: 1px;
+            outline: none;
+            padding: 15px;
+            margin: 0px;
+            font-size: x-small;
+            font-weight: 800;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .inputContainer[data-error] .input{
+            /* border-color: red; */
+            /* background-color: red; */
+            /* text-align: right; */
+        }        
+        
+        .inputContainer[data-error]::after{
+            content: attr(data-error);
+            font-size: x-small;
+            /* background-color: greenyellow; */
+            color: red;
+            /* display: block; */
+            /* float: left; */
+            text-align: right;
+            margin: 5px 5px 5px 0px;
+            width: 90%;
+        }
+
+
+        input::placeholder{
+            margin:10px;
+            font-weight:800;
+            font-size: 12px;
+        }
+
+        input:required:invalid{
+            border-color: red;
+            background: url(./assets/images/icon-error.svg);
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            /* background */
+        }
+
+        input:required:empty{
+            /* background: url(./assets/images/icon-error.svg);
+            background-position: 95% 50%;
+            background-repeat: no-repeat;  */
+            /* border-color: red; */
+        }
+
+        button{
+            width: 90%;
+            height: 90%;
+            min-height: 40px;
+            border: none;
+            background-color: #37cc8a;
+            /* padding: 15px 55px; */
+            border-radius: 5px;
+            font-size: 10px;
+            /* flex: 0.8; */
+            /* height: 10px !important; */
+            margin: 0px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+
+        .small.right{
+            font-size: 8px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .small.right.red{
+            color: red;
+        }
+
+        @media screen and (max-width: 875px) {
+            .parentContainer{
+                background: url(./assets/images/bg-intro-mobile.png);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                /* background-color: blue; */
+                /* height: 100%; */
+                width: 100%;
+                height: 100%;
+
+                /* background-color: aqua; */
+            }
+            section{
+                /* background-color: red; */
+            }
+            .sectionLeft{
+                /* background-color: lime; */
+                /* width: 100%; */
+                
+                display: flex;
+                /* flex-direction: column; */
+                align-items: center;
+                justify-content: center;
+                /* border: 1px solid black; */
+                flex: 1;
+                text-align: center;
+                margin: auto auto;
+                /* background-color: yellow; */
+                width: 100%;
+                padding: 0px;
+
+            }
+            .sectionLeftContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* background-color: red; */
+                width: 80%;
+                /* margin-right: 40px; */
+            }
+            .small.left{
+                margin-top: 30px;
+                width: 100%;
+                font-size: 16px;
+            }
+            .sectionRight{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 10px;
+                /* background-color: cyan; */
+                /* border: 1px solid black ; */
+                flex: 3;
+                /* background-color: lawngreen; */
+                width: 100%;
+            }
+            form{
+                width: 77%;
+                padding: 5px;
+                border-radius: 5px;
+                /* min-width: 250px; */
+                /* min-height: 250px; */
+            }
+            .formHead{
+                width: 80%;
+                height: 65px;
+                padding: 0px;
+                /* margin: 0px; */
+            }
+            .firstParagraph{
+                /* text-align: center; */
+                margin: 0px;
+            }
+            img{
+                /* display: none; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="parentContainer">
+            <section class="sectionLeft">
+                <div class="sectionLeftContainer">
+                    <p class="firstParagraph">
+                        Learn to code by watching others
+                    </p>
+                    <!-- <br/> -->
+                    <small class="small left">
+                        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,but understanding how developers think is invaluable.
+                    </small>
+                </div>
+            </section>
+            <section class="sectionRight">
+                <div class="formHead"> Try it free 7 days then $20/mo therafter</div>
+                <form>
+                    <span class="inputContainer" data-error="First Name cannot be empty"> 
+                        <input class="input" type="text" placeholder="First Name" required />
+                    </span>
+                    <span class="inputContainer" data-error="Last Name cannot be empty">
+                        <input class="input" type="text" placeholder="Last Name" required data-error="XYZ" />
+                    </span>
+                    <span class="inputContainer" data-error="Looks like this is not an email">
+                        <input class="input" type="email" placeholder="Email Address" required/>
+                    </span>
+                    <span class="inputContainer" data-error="Password cannot be empty">
+                        <input class="input" type="password" placeholder="Password" required/>
+                    </span>
+                    <span class="buttonContainer">
+                        <button> CLAIM YOUR FREE TRIAL</button>
+                    </span>
+                    <span class="inputContainer">
+                        <small class="small right">By clicking the button you are agreeing to <small class="small right red"> terms and conditions</small></small>
+                    </span>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.inputContainer[data-error] .input').forEach(
+            inpEl => {
+                inpEl.addEventListener('input', () =>inpEl.parentElement.removeAttribute('data-error'));
+            }
+        )
+    </script>
+</body>
+</html>
