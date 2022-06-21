@@ -1,54 +1,128 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        main{
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* width: 100%; */
-            /* height: 100%; */
-            /* background-color: pink; */
-        }
-        section{
-            /* flex: 1; */
-            width: 100%;
-            /* height: 500px; */
-            /* height: 100%; */
-        }
-        .section1{
-            /* background: url(./assets/images/illustration-mockups.svg); */
-            background: url(./assets/images/bg-hero-desktop.svg);
-            background-repeat: no-repeat;
-            height: 900px;
-            display: flex;
-        }
-        .headerTop{
-            
-        }
-    </style>
+    <title>Huddle- Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
-    <main>
-        <section class="section1">
-            <header class="headerTop">
+    <div class="main-container"></div>
+        <header id="main-header">
+            <section id="menu">
+                <img src="./assets/logo.svg" alt="Huddle Logo" class="logo">
+                <a href=""><button>Try it Free</button></a>
+            
+            </section>
 
-            </header>
-            <div class="mainSection">
-                <img src="./assets/images/illustration-mockups.svg" />
+            <section class="bottom-head">        
+                <div class="first main-section-items">
+                    <h1>Build The Community Your Fans Would Love</h1>
+                    <p>Huddle re-imagines the way we build communities. You have a voice but so does your audience.
+                        Create connections with your users as you engage in genuine discussions.
+                    </p>
+                    <button>Get Started for Free</button>
+                </div>
+
+                <div class="second main-section-items">
+                    <img src="./assets/illustration-mockups.svg" alt="Hero Image">
+                </div>
+            </section>
+        </header>
+        <main id="main-content">
+            <div class="main-content">
+                <div class="main-content-1 main-content-item">
+                    <h2>Grow Together</h2>
+                    <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
+                        Think of the insightful conversations you miss out on with a feedback form.</p>
+                </div>
+
+                <div class="main-content-2 main-content-item">
+                    <img src="./assets/illustration-grow-together.svg" alt="Grow Together">
+                </div>
             </div>
-        </section>
-        <section class="section2">
-        </section>
-        <section class="section3">
-        </section>
-        <section class="section4">
-        </section>
-        <section class="section5">
-        </section>
-        
-    </main>
+
+            <div class="main-content come">
+                <div class="main-content-1 main-content-item">
+                    <h2>Flowing Conversations</h2>
+                    <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
+                        have just in-time loading for a more natural flow.</p>
+                </div>
+
+                <div class="main-content-2 main-content-item">
+                    <img src="./assets/illustration-flowing-conversation.svg" alt="Grow Together">
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="main-content-1 main-content-item">
+                    <h2>Your Users</h2>
+                    <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+                        once signed in to your app, your users can start chatting imeediately.</p>
+                </div>
+
+                <div class="main-content-2 main-content-item">
+                    <img src="./assets/illustration-your-users.svg" alt="Grow Together">
+                </div>
+            </div>
+        </main>
+
+        <footer id="down">
+
+            <section id="ready">
+                <div class="ready">
+                    <h2>Ready To Build Your Community</h2>
+                    <a href=""><button>Get Started For Free</button></a>
+                </div>
+            </section>
+
+            <img src="./assets/logo.svg" alt="Huddle Logo" class="logo"> 
+
+            <div class="footer-content">
+                <div class="first-footer">
+                    <div class="icon-text">
+                        <div><img src="./assets/icon-location.svg" alt="Location"></div>
+                        <div><p class="first-resize">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+                    </div>
+                    <div class="icon-text">
+                        <div><img src="./assets/icon-phone.svg" alt="Phone"></div>
+                        <div><p>+2348158730959</p></div>
+                    </div>
+                    <div class="icon-text">
+                        <div><img src="./assets/icon-email.svg" alt="Email"></div>
+                        <div><p>jibolashittubolu@gmail.com</p></div>
+                    </div>
+                </div>
+
+                <div class="second-footer">
+                    <a href="#">About Us</a>
+                    <a href="#">What We Do</a>
+                    <a href="#">FAQ</a>
+                </div>
+
+                <div class="third-footer">
+                        <a href="#">Career</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact Us</a>
+                </div>
+
+                <div class="fourth-footer">
+                    <div>
+                        <a href=""><img src="./assets/facebook-brands.svg" alt="Facebook"></a>
+                        <a href=""><img src="./assets/twitter-brands.svg" alt="Twitter"></a>
+                        <a href=""><img src="./assets/linkedin-brands.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; jibolashittubolu, 2022 </p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
