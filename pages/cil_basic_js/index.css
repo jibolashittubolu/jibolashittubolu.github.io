@@ -32,7 +32,7 @@ body{
     min-height: 15vh;
 }
 .spinner-improv{
-    /* display: none; */
+    display: none;
 }
 .error-improv{
     color: red;
