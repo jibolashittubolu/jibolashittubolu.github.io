@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="5; url='https://www.dropbox.com/s/6sz0dnbgvrpdv2v/Business%20Analysis.mp4?dl=0'" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <style>
+        body{
+            margin: 0;
+        }
+        .div{
+            max-width: 100vw;
+            min-height: 100vh;
+            max-height: 100vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+
+            /* background-color: rgb(0, 0, 0); */
+            /* Fallback color */
+            /* background-color: rgba(0, 0, 0, 0.2); */
+            /* Black w/opacity/see-through */
+            /* border: 3px solid; */
+        }
+        span{
+            /* font-size: 1.5rem; */
+
+        }
+        a{
+            margin-top: 3rem;
+            /* width: 80%; */
+            text-align: center;
+            text-decoration: underline;
+            font-size: 32px;
+            font-family: monospace;
+            letter-spacing: 5px;
+            animation: colorRotate 5s linear 0s infinite;
+        }
+        @keyframes colorRotate {
+            from {
+                color: #6666ff;
+            }
+            10% {
+                color: #0099ff;
+            }
+            20%{
+                color: white;
+            }
+            30%{
+                color: white;
+            }
+            50% {
+                color: #00ff00;
+            }
+            60%{
+                color: white;
+            }
+            75% {
+                color: #ff3399;
+            }
+            85%{
+                color: white;
+            }
+            100% {
+                color: #6666ff;
+            }
+        }
+
+        .timer-out-click{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="div">
+        <span class="first-liner">If you are not redirected in <span class="timer-display">5</span> seconds, please click the below link to access the requested document</a>
+        </span>
+        <span class="timer-out-click">If you have not been redirected, please click the below link</span>
+        <a href="https://www.google.com">https://www.google.com</a>
+    </div>
+    <script>
+        const intervalGenAndClear = () => {
+
+            let timer = 5
+            const timer_display = document.querySelector('.timer-display')
+            const setTimeoutDisplayer = () => {
+                timer_display.innerHTML = timer
+                timer--
+                if(timer === 0){
+                    clearInterval(timer_interval)
+                    const first_liner = document.querySelector('.first-liner')
+                    first_liner.style.display = 'none'
+                    const timer_out_click = document.querySelector('.timer-out-click')
+                    timer_out_click.style.display = 'block'
+                    // timer_display.style.display = 'none'
+                }
+        } 
+        var timer_interval = setInterval(setTimeoutDisplayer, 1000)
+        
+        }
+        intervalGenAndClear()
+    </script>
+</body>
+</html>
