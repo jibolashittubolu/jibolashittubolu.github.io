@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/pages/brochure/static/css/main.5292cfa2.css",
+    "main.js": "/pages/brochure/static/js/main.fab64272.js",
+    "static/js/787.3c2682fa.chunk.js": "/pages/brochure/static/js/787.3c2682fa.chunk.js",
+    "static/media/brochure.pdf": "/pages/brochure/static/media/brochure.e3b259ad116292e3cde0.pdf",
+    "static/media/oau-motion-ground.jpg": "/pages/brochure/static/media/oau-motion-ground.91428c198c40773309f6.jpg",
+    "static/media/oau_logo.svg": "/pages/brochure/static/media/oau_logo.3e412d64156f63bc95ec589f31bd2ccd.svg",
+    "index.html": "/pages/brochure/index.html",
+    "main.5292cfa2.css.map": "/pages/brochure/static/css/main.5292cfa2.css.map",
+    "main.fab64272.js.map": "/pages/brochure/static/js/main.fab64272.js.map",
+    "787.3c2682fa.chunk.js.map": "/pages/brochure/static/js/787.3c2682fa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5292cfa2.css",
+    "static/js/main.fab64272.js"
+  ]
+}
