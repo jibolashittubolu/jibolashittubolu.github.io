@@ -3,7 +3,6 @@
 // Replace this with your own email address
 $siteOwnersEmail = 'jibolashittubolu@gmail.com';
 
-
 if($_POST) {
 
    $name = trim(stripslashes($_POST['contactName']));
