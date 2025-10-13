@@ -5,7 +5,6 @@ $siteOwnersEmail = 'jibolashittubolu@gmail.com';
 
 if($_POST) {
 	
-
    $name = trim(stripslashes($_POST['contactName']));
    $email = trim(stripslashes($_POST['contactEmail']));
    $subject = trim(stripslashes($_POST['contactSubject']));
@@ -67,3 +66,4 @@ if($_POST) {
 }
 
 ?>
+
