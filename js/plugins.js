@@ -5,7 +5,6 @@
  *
  * ------------------------------------------------------------------- 
  */
-
 /* HTML5 Placeholder jQuery Plugin - v2.1.2
  * Copyright (c)2015 Mathias Bynens
  * 2015-06-09
